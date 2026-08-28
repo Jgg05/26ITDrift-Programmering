@@ -1,0 +1,7 @@
+#Forventet oppførsel: regn ut ny pris etter at rabatten er trukket fra.
+#pris_tekst er en tekststreng, og må konverteres til et tall før vi kan gjøre beregningen. Det bør også vurderes og
+# bytte navnet på variabelen til noe som indikerer at det er et tall, for eksempel pris_tall.
+pris_tekst = "199"
+rabatt_prosent = 20
+ny_pris = pris_tekst - (pris_tekst * rabatt_prosent / 100)
+print("Ny pris er", ny_pris, "kr")

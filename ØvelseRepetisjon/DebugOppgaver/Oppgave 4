@@ -1,0 +1,5 @@
+fornavn = "Ola"
+etternavn = "Nordmann"
+#Det mangler et mellomrom mellom fornavn og etternavn i print. eller fjern "end" og "sep" i print og bruk bare print(fornavn, etternavn) for å få mellomrom mellom navnene.
+print(fornavn, etternavn, end=" ", sep="")
+

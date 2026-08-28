@@ -1,0 +1,18 @@
+vare = input("Hvilken vare kjøper du? ")
+pris = input("Hva koster varen (kr)? ")
+antall = input("Hvor mange stykk? ")
+rabatt_prosent = 10 # faste kunder får alltid 10 % rabatt
+#Delsum må konverteres til float for å kunne gjøre beregningen. Antall konverteres til int for å kunne gjøre beregningen.
+delsum = float(pris) * int(antall)
+rabatt = delsum * rabatt_prosent / 100
+totalsum = delsum - rabatt
+belop_betalt = input("Hvor mye betaler kunden (kr)? ")
+#Veksling må konverteres til float for å kunne gjøre beregningen.
+veksling = float(belop_betalt) - totalsum
+print("Kvittering")
+print("-" * 20)
+print(vare, antall, "stk", sep=" x ")
+print("Delsum:", delsum, "kr")
+print("Rabatt:", rabatt, "kr")
+print("Totalt:", totalsum, "kr")
+print("Veksling:", veksling, "kr")
