@@ -1,0 +1,12 @@
+# Be brukeren om et beløp de betaler med (heltall, kroner) og prisen på varen (heltall, kroner).
+# Regn ut byttepengene, og vis hvordan beløpet kan gis tilbake med færrest mulig sedler/mynter i valørene 100, 50, 20, 10 og 1 kroner.
+
+beløp = int(input("Hva betalte du? "))
+pris = int(input("Hva kostet varen? "))
+
+veksel = beløp - pris
+
+hundrelapper = veksel // 100
+
+femtilapper = veksel // 50
+print(hundrelapper, "hundrelapper")
