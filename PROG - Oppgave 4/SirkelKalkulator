@@ -1,0 +1,30 @@
+# Brukes til å kontrollere at tallet er et vanlig, endelig tall
+import math
+
+# Ber om radius til sirkelen fra brukeren
+while True:
+	# Fjerner eventuelle mellomrom før og etter inputen
+	radius_input = input("Radius til sirkelen: ").strip()
+
+	try:
+		# Forsøker å gjøre inputen om til et desimaltall
+		radius = float(radius_input)
+		# Radiusen må være større enn 0 og ikke være uendelig eller noe annet enn et vanlig tall
+		if radius > 0 and math.isfinite(radius):
+			break
+	except ValueError:
+		# Kjøres hvis brukeren skriver bokstaver eller tom input
+		pass
+
+	# Ber brukeren prøve på nytt hvis inputen ikke er gyldig
+	print("Skriv inn et positivt tall.")
+
+# Beregner arealet av sirkelen
+areal = 3.14 * radius ** 2
+# Beregner omkretsen av sirkelen
+omkrets = 2 * 3.14 * radius
+
+# Skriver ut radius, areal og omkrets
+print("Radiusen til sirkelen er: ", radius)
+print("Arealet av sirkelen er: ", areal)
+print("Omkretsen av sirkelen er: ", omkrets)
