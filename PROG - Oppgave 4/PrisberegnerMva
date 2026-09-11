@@ -1,0 +1,29 @@
+import math
+
+# Ber om pris fra brukeren
+while True:
+	# Fjerner eventuelle mellomrom før og etter inputen
+	pris_input = input("Skriv prisen på varen eks. mva: ").strip()
+
+	try:
+		# Forsøker å gjøre inputen om til et desimaltall
+		pris = float(pris_input)
+		# Prisen må være større enn 0 og ikke være uendelig eller noe annet enn et vanlig tall
+		if pris > 0 and math.isfinite(pris):
+			break
+	except ValueError:
+		# Kjøres hvis brukeren skriver bokstaver eller tom input
+		pass
+
+	# Ber brukeren prøve på nytt hvis inputen ikke er gyldig
+	print("Skriv inn et positivt tall.")
+
+# Beregner prisen med mva
+mva = pris * 0.25
+pris_med_mva = pris + mva
+
+# Skriver ut prisen uten mva
+print(f"Prisen uten mva er: {pris:.2f}")
+
+# Skriver ut prisen med mva
+print(f"Prisen med mva er: {pris_med_mva:.2f}")
