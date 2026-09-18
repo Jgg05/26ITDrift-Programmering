@@ -1,0 +1,24 @@
+# Oppgave 4 - While
+# Programmet skal be bruker om et tall, sjekke om det er oddetall eller partall.
+# Lagrer antallganger partall og oddetall dukker opp.
+# Spør brukeren om å skrive inn et nytt tall, og fortsett til brukeren skriver inn 0.
+
+# Oppretter variabler for å lagre antall partall og oddetall
+partall = 0
+oddetall = 0
+tall = int(input("Skriv inn et tall: "))
+
+# Sjekker om tallet som er skrevet inn er partall eller oddetall.
+while tall != 0:
+    # Om tallet ikke har rest når det deles på 2 vet vi at det er et partall, da legges til 1 til partall variabelen.
+    if tall % 2 == 0:
+        partall += 1
+    # Om tallet har rest når det deles på 2 vet vi at det er et oddetall, da legges til 1 til oddetall variabelen.
+    else:
+        oddetall += 1
+    # Spør brukeren om å skrive inn et nytt tall, bruker 
+    tall = int(input("Skriv inn et nytt tall (eller 0 for å avslutte): "))  
+
+# Skriver ut antall partall og oddetall som er skrevet inn
+print("Antall partall som er skrevet inn: ", partall)
+print("Antall oddetall som er skrevet inn: ", oddetall)
