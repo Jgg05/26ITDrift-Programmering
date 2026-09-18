@@ -3,16 +3,19 @@
 # Programmet skal fortsette å be om tall helt til brukeren skriver inn et negativt tall.
 # Til slutt skal programmet skrive ut summen og gjennomsnittet av alle de positive tallene som ble skrevet inn.
 
+# Setter opp variabler for summen, gjennomsnitter og for input fra brukeren.
 sum_positive = 0
 antall_positive = 0
 input_tall = int(input("Skriv inn et tall: "))
 
 while True:
+    # Sjekker om tallet er negativt, og avslutter løkken hvis det er det.
     if input_tall < 0:
         break
-
+    # Hvis tallet er positivt, legger det til summen og teller antall positive tall.
     sum_positive += input_tall
     antall_positive += 1
+    # Spør brukeren om et nytt tall.
     input_tall = int(input("Skriv inn et tall (Skriv et negativt tall for å avslutte): "))
 
 print("Summen av de positive tallene er: ", sum_positive)
