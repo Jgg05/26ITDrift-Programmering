@@ -1,0 +1,19 @@
+# Oppgave 3 - betinget kjøring
+# Skriv et program som ber brukeren om å skrive inn tre tall.
+# Programmet skal deretter finne og skrive ut det minste tallet.
+
+# Oppretter tre variabler for å lagre tallene som brukeren skriver inn
+tall1 = float(input("skriv inn første tallet: "))
+tall2 = float(input("skriv inn andre tallet: "))
+tall3 = float(input("skriv inn tredje tallet: "))
+
+# sjekker om tall1 er minst
+if tall1 < tall2 and tall1 < tall3:
+    print("tallet", tall1, "er minst")
+# sjekker om tall2 er minst
+elif tall2 < tall1 and tall2 < tall3:
+    print("tallet", tall2, "er minst")
+# sjekker om tall3 er minst
+else:
+    print("tallet", tall3, "er minst")
+
