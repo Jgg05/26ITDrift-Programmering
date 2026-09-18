@@ -4,11 +4,17 @@
 # Til slutt skal programmet skrive ut summen og gjennomsnittet av alle de positive tallene som ble skrevet inn.
 
 sum_positive = 0
+antall_positive = 0
 input_tall = int(input("Skriv inn et tall: "))
 
 while True:
-   
     if input_tall < 0:
         break
+
     sum_positive += input_tall
-    antall_positive += 1 
+    antall_positive += 1
+    input_tall = int(input("Skriv inn et tall (Skriv et negativt tall for å avslutte): "))
+
+print("Summen av de positive tallene er: ", sum_positive)
+print(f"Gjennomsnittet av de positive tallene er: {sum_positive / antall_positive if antall_positive > 0 else 0:.2f}")
+
