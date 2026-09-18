@@ -3,3 +3,12 @@
 # Programmet skal fortsette å be om tall helt til brukeren skriver inn et negativt tall.
 # Til slutt skal programmet skrive ut summen og gjennomsnittet av alle de positive tallene som ble skrevet inn.
 
+sum_positive = 0
+input_tall = int(input("Skriv inn et tall: "))
+
+while True:
+   
+    if input_tall < 0:
+        break
+    sum_positive += input_tall
+    antall_positive += 1 
