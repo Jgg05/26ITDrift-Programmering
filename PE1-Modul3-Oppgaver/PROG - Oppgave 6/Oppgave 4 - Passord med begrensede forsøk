@@ -1,0 +1,20 @@
+# Oppgave 4 - Passord med begrensede forsøk
+# Programmet skal be brukeren om å skrive inn et passord. Brukeren har kun 3 forsøk på å skrive inn riktig passord.
+
+# Lager en variabel for det lagrede passordet.
+lagret_passord = "python123"
+input_passord = ""
+
+for forsøk in range(3):
+    # ber brukeren om å skrive inn passordet.
+    input_passord = input("Skriv inn passordet: ")
+    # Sjekker om passordet er riktig. Om det er riktig går programmet ut av løkken og skriver ut "Tilgang gitt!". Om passordet er feil, skriver programmet ut hvor mange forsøk brukeren har igjen.
+    if input_passord == lagret_passord:
+        print("Tilgang gitt!")
+        break
+    # Om passordet er feil, skriver programmet ut hvor mange forsøk brukeren har igjen.
+    else:
+        print(f"Feil passord. Du har {2 - forsøk} forsøk igjen.")
+        # Om brukeren har brukt opp alle forsøkene, skriver programmet ut "For mange feil forsøk. Konto låst."
+        if forsøk == 2 and input_passord != lagret_passord:
+            print("For mange feil forsøk. Konto låst.") 
