@@ -1,11 +1,13 @@
 tall1 = float(input("skriv inn et tall: "))
 tall2 = float(input("skriv inn enda et tall: "))
 
+# Sjekker om tall1 er større enn tall2
 if tall1 > tall2:
     print(tall1, "er større enn", tall2)
+# Sjekker om tall2 er større enn tall1
 elif tall1 < tall2:
     print(tall2, "er større enn", tall1)
-
+# Sjekker om tall1 og tall2 er like store
 else:
     print("tallene ", tall1, "og", tall2, "er like store")
 
