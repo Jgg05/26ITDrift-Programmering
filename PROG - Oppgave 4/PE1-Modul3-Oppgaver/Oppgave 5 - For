@@ -1,0 +1,10 @@
+# Oppgave 5 - For
+# Skriv et program som teller "mississippily"
+# Skriver ut "1 mississippily", "2 mississippily" osv. helt til 10 mississippily.
+
+# for løkke som printer ut tallene fra 1 til 10, og legger til "mississippily" etter hvert tall. Den går videre etter den har skrevet ut 10 mississippily.
+for i in range(1, 11):
+    print(i, "mississippily")
+
+# Skriver ut en melding når programmet er ferdig
+print("Mississippily er ferdig!")
