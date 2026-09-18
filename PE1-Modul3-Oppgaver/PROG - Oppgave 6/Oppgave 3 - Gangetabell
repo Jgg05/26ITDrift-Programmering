@@ -1,0 +1,8 @@
+# Oppgave 3 - Gangetabell
+# Printer gangetabellen for tallet som brukeren skriver inn. Formatet skal være "3 x 4 = 12"
+
+# Henter input fra brukeren og konverterer det til et heltall.
+input_tall = int(input("Skriv inn et tall: "))
+for multiplikator in range(1, 11):
+    # Utfører multiplikasjonen og printer resultatet i riktig format.
+    print(f"{input_tall} x {multiplikator} = {input_tall * multiplikator}")
