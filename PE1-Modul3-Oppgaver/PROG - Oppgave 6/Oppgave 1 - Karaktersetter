@@ -1,0 +1,21 @@
+# Oppgave 1 - Karaktersetter
+# programmet skal ta input fra bruker, poengsum mellom 0 og 100, og returnere karakteren som tilsvarer poengsummen.
+
+poengsum = int(input("Skriv inn poengsum (0-100): "))
+
+# Om poengsummen er mellom 90 og 100 skrives "Karakter: A" ut
+if poengsum >= 90:
+    print("Karakter: A")
+# Om poengsummen er mellom 75 og 89 skrives "Karakter: B" ut
+elif poengsum >= 75:
+    print("Karakter: B")
+# Om poengsummen er mellom 60 og 74 skrives "Karakter: C" ut
+elif poengsum >= 60:
+    print("Karakter: C")
+# Om poengsummen er mellom 40 og 59 skrives "Karakter: D" ut
+elif poengsum >= 40:
+    print("Karakter: D")
+# Om poengsummen er under 40 skrives "Karakter: F" ut
+else:
+    print("Karakter: F")
+
