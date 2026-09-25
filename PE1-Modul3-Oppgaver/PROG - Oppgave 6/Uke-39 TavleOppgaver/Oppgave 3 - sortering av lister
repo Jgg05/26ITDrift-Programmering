@@ -1,0 +1,19 @@
+# Oppgave 3 - sortering av lister
+# Programmet sorterer den gitte listen fra minst til størst
+# Så reverseres listen før den skrives ut.
+
+# Setter opp en liste med navn "score"
+score = [68, 45, 92, 77, 55, 83, 61]
+
+# Sorterer "score" minst -> størst og skriver det ut
+score.sort()
+print(score)
+
+# Skriver ut laveste og høyeste verdi i listen
+print("Laveste verdi: ", score[0])
+print("Høyeste verdi: ", score[-1])
+
+# Snur på hele listen og skriver det ut
+score.reverse()
+print(score)
+
