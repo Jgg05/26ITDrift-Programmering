@@ -1,0 +1,16 @@
+# Oppgave 1 - Lister
+# Programmet spør brukeren om ett navn som bytter ut det 3. navnet i listen.
+# Programmet sletter det siste navnet i listen og skriver ut hvor mange navn som er igjen i listen.
+
+# Oppretter en liste for å lagre navnene.
+navn = ["Jonas", "Ola", "Kari", "Per", "Anne"]
+# Skriv ut navnene i listen. Så spør brukeren om å skrive inn ett navn som bytter ut det 3. navnet i listen.
+print(navn)
+navn[2] = (input("Skriv inn ett navn: "))
+# Skriver ut listen på nytt etter navnet er byttet ut.
+
+# Sletter det siste navnet i listen.
+del navn[-1]
+# skriver ut hvor mange navn som er igjen i listen. Så skriver ut listen på nytt.
+print("Sletter det siste navnet i listen og legger til navnet som er skrevet inn.\nDet er", len(navn), "navn i listen.")
+print(navn)
