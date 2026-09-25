@@ -1,0 +1,45 @@
+# Oppgave 2 - behandling av lister
+# Programmet starter med en liste med ost, melk og brød.
+
+##########################################################################
+# start Pseudokode
+# Opprette en liste(handleliste) og oppdatere den med ost, melk og brød
+# Be om brukeren om noe som skal legges til øverst i handlelisten
+# Be om brukeren om noe som skal legges til i handlelisten
+# Sjekk om varen brukeren vil legge til finnes i handlelisten
+# Hvis varen finnes i handlelisten fjernes den fra listen
+# Hvis varen ikke finnes i handlelisten legges den til i listen
+# Skriv ut handlelisten
+# Slutt Pseudokode
+##########################################################################
+
+# Oppretter handlelisten med varene ost, melk og brød i. Skriver ut hva som er i handlelisten
+handleliste = ["ost", "melk", "brød"]
+print("Varene i handlelisten er:")
+for vare in handleliste:
+    print(vare)
+
+# Spør bruker om en ny vare som skal legges til i handlelisten
+nyVare = input("Hva vil du legge til i handlelisten? ")
+# Lager en while loop som fortsetter så lenge bruker ikke skriver "0"
+while nyVare != "avslutt":
+    # Programmet sjekker om varen allerede finnes i listen, hvis den gjør det fjernes den fra listen
+    if nyVare in handleliste:
+        handleliste.remove(nyVare)
+        print(nyVare, "finnes allerede i listen, og er nå fjernet.")
+    # Om varen ikke finnes fra før legges den til i listen
+    elif nyVare not in handleliste:
+        handleliste.append(nyVare)
+
+    # Skriver ut handlelisten på nytt
+    print("Varene i handlelisten er:")
+    for vare in handleliste:
+        print(vare)
+
+    # Spør bruker igjen om det er noe som skal legges til i handlelisten
+    nyVare = input("Hva vil du legge til i handlelisten?(Skriv inn 'avlsutt' for å avslutte)")
+
+# Skriv ut varene i handlelisten igjen
+print("Varene i handlelisten er:")
+for vare in handleliste:
+    print(vare)
