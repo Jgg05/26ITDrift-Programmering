@@ -1,0 +1,19 @@
+# PE-Modul3-3.1.11 LAB
+# Programmet skal regne ut skatt 
+
+# Spør bruker om input
+income = float(input("Enter the annual income: "))
+
+# Sjekker om income er mindre enn 85528 eller ikke
+if income < 85528:
+	tax = income * 0.18 - 556.02
+else:
+	tax = (income - 85528) * 0.32 + 14839.02
+
+# Om svaret programmet får etter å ha kalkulert income tax er mindre enn 0.0 blir tax også 0.0
+if tax < 0.0:
+	tax = 0.0
+
+# Runder av tax til ett desimal og skriver ut resultatet
+tax = round(tax, 0)
+print("The tax is:", tax, "thalers")
