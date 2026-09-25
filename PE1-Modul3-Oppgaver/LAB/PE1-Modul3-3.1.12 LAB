@@ -1,0 +1,10 @@
+# PE1-Modul3-3.1.12
+# Program som skal få et år fra bruker og sjekke om det er en del av den Gregorianske kalenderen,
+# og om året er et skuddår
+
+year = int(input("Enter a year: "))
+
+if year < 1582:
+	print("Not within the Gregorian calendar period")
+else:
+    # Write the if-elif-elif-else block here.
