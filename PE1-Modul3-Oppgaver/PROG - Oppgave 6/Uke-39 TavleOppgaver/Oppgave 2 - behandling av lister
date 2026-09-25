@@ -39,7 +39,8 @@ while nyVare != "avslutt":
     # Spør bruker igjen om det er noe som skal legges til i handlelisten
     nyVare = input("Hva vil du legge til i handlelisten?(Skriv inn 'avlsutt' for å avslutte) ")
 
-# Skriv ut varene i handlelisten igjen
+# Sorterer  og skriver ut varene i handlelisten igjen
+handleliste.sort()
 print("Varene i handlelisten er:")
 for vare in handleliste:
     print(vare)
