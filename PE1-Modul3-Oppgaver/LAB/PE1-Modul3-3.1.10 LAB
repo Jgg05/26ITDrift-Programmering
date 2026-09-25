@@ -1,2 +1,17 @@
 # PE1-Modul3-3.1.10 LAB
-# 
+# Programmet skal skrive ut "Yes - Spathiphyllum is the best plant ever!" om "Spathiphyllum" er skrevet
+# Om "Spathiphyllum" er skrevet med liten s vil programmet påpeke det.
+# Om det er skrevet noe annet vil det si at den vil ha "Spathiphyllum"
+
+# Spør brukeren om input og lagrer det inn i "input_ord"
+input_ord = input("hva skal du gi programmet? ")
+
+# Sjekker om input_ord er "Spathiphyllum"
+if input_ord == "Spathiphyllum":
+    print("Yes - Spathiphyllum is the best plant ever!")
+# Sjekker om input_ord er "spathiphyllum" om det ikke er "Spathiphyllum"
+elif input_ord == "spathiphyllum":
+    print("No, I want a big Spathiphyllum!")
+# Skrives ut om input_ord ikke er "Spathiphyllum" eller "spathiphyllum"
+else:
+    print("Spathiphyllum! Not ", input_ord +"!")
