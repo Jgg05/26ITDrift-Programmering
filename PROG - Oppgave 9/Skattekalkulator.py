@@ -13,12 +13,15 @@ while bruttolønn >= 0:
     skatt = bruttolønn * skatteprosent / 100
     nettolønn = bruttolønn - skatt
 
+    # Skriv ut resultatene.
     print(f"Brutto årslønn: {bruttolønn:.2f} kr")
     print(f"Skatteprosent: {skatteprosent} %")
     print(f"Skatt: {skatt:.2f} kr")
     print(f"Netto årslønn: {nettolønn:.2f} kr")
+    print(f"Omtrentlig månedslønn etter skatt: {nettolønn / 12:.2f} kr")
 
     # Les inn neste årslønn, eller et negativt tall for å avslutte.
     bruttolønn = float(input("Skriv inn brutto årslønn (eller et negativt tall for å avslutte): "))
+
 
 print("Skattekalkulatoren er avsluttet.")
