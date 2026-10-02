@@ -19,6 +19,7 @@ while bruttolønn >= 0:
     print(f"Skatt: {skatt:.2f} kr")
     print(f"Netto årslønn: {nettolønn:.2f} kr")
     print(f"Omtrentlig månedslønn etter skatt: {nettolønn / 12:.2f} kr")
+    print("-----------------------------")
 
     # Les inn neste årslønn, eller et negativt tall for å avslutte.
     bruttolønn = float(input("Skriv inn brutto årslønn (eller et negativt tall for å avslutte): "))
