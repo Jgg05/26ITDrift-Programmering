@@ -1,0 +1,23 @@
+# Oppgave 2 - Kvittering
+# Programmet skal ha en funksjon "Kvittering" som skal ta inn 3 parametere: Vare, pris og antall.
+# Funksjonen regner ut totalprisen -> antall * vare = totalpris
+# Ber brukeren skrive inn navn på vare, pris og antall. Kjører funksjonen og printer ut kvitteringen.
+
+# Definerer funksjonen "Kvittering" med tre parametere: vare, pris og antall. Den regner ut totalprisen og printer ut kvitteringen.
+def kvittering(vare, pris, antall):
+    totalpris = pris * antall
+    print("Kvittering:")
+    print("---------------")
+    print("Vare:", vare)
+    print(f"Pris per enhet: {pris}kr")
+    print("Antall:", antall)
+    print(f"Totalpris: {totalpris}kr")
+    print("---------------")
+
+# Ber brukeren om å skrive inn navn på vare, pris og antall.
+vare = input("Skriv inn navnet på varen: ")
+pris = float(input("Skriv inn prisen på varen: "))
+antall = int(input("Skriv inn antall av varen: "))
+
+# Kjører funksjonen og printer ut kvitteringen.
+kvittering(vare, pris, antall)
