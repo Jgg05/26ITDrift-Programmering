@@ -1,0 +1,27 @@
+# Oppgave 3 - Rabatt og Moms kalkulator
+# Programmet skal ha 2 funksjoner: rabatt og med_moms.
+# Programmet skal be brukeren om å skrive inn en pris og en rabattprosent. Deretter regne ut totalprisen og skrive ut totalprisen med og uten moms.
+
+# Definerer funksjonen "rabatt" 
+def rabatt(pris, rabattprosent):
+    totalpris = pris * (1 - rabattprosent / 100)
+    return totalpris
+
+# Definerer funksjonen "med_moms"
+def med_moms(pris, momsprosent):
+    totalpris = pris * (1 + momsprosent / 100)
+    return totalpris
+
+
+# Ber brukeren om å skrive inn en pris og en rabattprosent.
+pris = float(input("Skriv inn prisen: "))
+rabattprosent = float(input("Skriv inn rabattprosenten: "))
+momsprosent = float(input("Skriv inn momsprosenten: "))
+
+# Kjører funksjonene og skriver ut resultatene.
+totalpris_rabatt = rabatt(pris, rabattprosent)
+totalpris_moms = med_moms(pris, momsprosent)
+
+print(f"Totalpris med rabatt: {totalpris_rabatt}kr")
+print(f"Totalpris med moms: {totalpris_moms}kr")
+
