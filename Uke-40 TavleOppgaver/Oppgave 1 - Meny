@@ -1,0 +1,23 @@
+# Oppgave 1 - Meny
+# Programmet skal ha en funksjon "Meny" som skal kun printe en meny til brukeren.
+# Den skal ha 3 valg, den skal spør bruker om et valg og skrive det ut.
+# Så spør brukeren om å se menyen igjen, hvis ja, skal den printe menyen igjen, hvis nei, skal programmet avslutte.
+
+# Funksjon "Meny" som printer ut melding og hele menyen til brukeren.
+def meny():
+    Meny = ["1. Kaffe", "2. Te", "3. Vann"]
+    print("Velkommen! Her er menyen:")
+    for valg in Meny:
+        print(valg)
+
+# Spør brukeren om et valg og skriver det ut.
+brukerValg = input("Hva velger du? (Skriv inn 1, 2 eller 3): ")
+print("Du valgte:", brukerValg, "som er", "Kaffe" if brukerValg == "1" else "Te" if brukerValg == "2" else "Vann" if brukerValg == "3" else "Ugyldig valg")
+
+# Spør brukeren om å se menyen igjen. 
+seMenyIgjen = input("Vil du se menyen igjen? (ja/nei): ")
+if seMenyIgjen == "ja":
+    meny()
+
+else:
+    print("Takk for besøket! Ha en fin dag!") 
