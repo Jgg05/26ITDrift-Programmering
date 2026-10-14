@@ -1,0 +1,38 @@
+# Oppgave 1 - Global Variabel
+# Programmet skal ha funksjonene gi_poeng som legger til poeng til en global variabel og vis_poeng som skriver ut "Du har x poeng"
+
+# Definerer funksjonen gi_poeng som tar inn antall poeng som parameter
+def gi_poeng(antall):
+    # Bruker den globale variabelen poeng
+    global poeng
+    # Legger til antall poeng til den globale variabelen
+    poeng += antall
+
+# Definerer funksjonen vis_poeng som skriver ut antall poeng, bruker "f-string" for å formatere strengen.
+def vis_poeng():
+    print(f"Du har {poeng} poeng!")
+
+# Lager en global variabel for å holde styr på poeng
+poeng = 0
+
+# Starter programmet og spør brukeren om å svare på et spørsmål
+print("Hva er 3+4? q for å avslutte")
+bruker_input = input("Skriv inn svaret: ")
+
+# Starter en while-løkke som fortsetter så lenge brukeren ikke skriver "q"
+while bruker_input != "q":
+    # Sjekker om brukerens input er 7 og gir poeng hvis det er riktig
+    if bruker_input == "7":
+        gi_poeng(1)
+        vis_poeng()
+
+    # Hvis brukerens input er noen anna ann 7 eller q vil det skrive ut en feilmelding og vise poengsummen
+    else:
+        print("Feil svar, prøv igjen.")
+        vis_poeng()
+    # Viser spørsmålet igjen og spør brukeren om å svare
+    print("Spørsmålet er: Hva er 3+4? q for å avslutte")
+    bruker_input = input("Skriv inn svaret: ")
+
+# Når bruker_input er "q" vil programmet avslutte og skrive ut en melding om at programmet avsluttes
+print("Programmet avsluttes.")
