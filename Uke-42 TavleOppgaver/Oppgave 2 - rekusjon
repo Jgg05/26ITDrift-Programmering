@@ -1,0 +1,26 @@
+# Oppgave 2 - Rekusjon
+# Programmet skal ha en rekursiv funksjon sum_til(n).
+# Funkdjonen skal returnere summen 1+2+...+n. Programmet skal spørre bruker om et tall og skriver ut summen.
+
+def sum_til(n):
+    # Basistilfellet: hvis n er 1, returner 1
+    if n == 1:
+        return 1
+    # Rekursivt tilfelle: returner n pluss summen av tallene opp til n-1
+    else:
+        return n + sum_til(n - 1)
+
+# Spør brukeren om et tall
+tall = int(input("Skriv inn et tall: "))
+
+# Lager en while-Løkke som fortsetter så lenge brukeren ikke skriver "q"
+while tall != "q":
+    # Kaller funksjonen sum_til med brukerens tall og lagrer resultatet
+    resultat = sum_til(tall)
+    # Skriver ut resultatet
+    print(f"Summen av tallene fra 1 til {tall} er: {resultat}")
+    # Spør brukeren om et nytt tall
+    tall = input("Skriv inn et tall eller q for å avslutte: ")
+
+# Når tall er "q" vil programmet avslutte og skrive ut en melding om at programmet avsluttes
+print("Programmet avsluttes.")
