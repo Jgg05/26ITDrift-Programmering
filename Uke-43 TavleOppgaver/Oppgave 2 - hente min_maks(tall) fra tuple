@@ -1,0 +1,20 @@
+# Oppgave 2 - Hente min_maks(tall) fra tuple
+# henter minste og største tall fra en liste med tall og returnerer dem som en tuple.
+
+# definerer funksjonen min_maks som tar en liste med tall som input
+def min_maks(tall):
+    # Sjekker om listen er tom
+    if not tall:
+        return None  # Returnerer None hvis listen er tom
+
+    minste = min(tall)  # Finner minste tall
+    største = max(tall)  # Finner største tall
+    return (minste, største)  # Returnerer som en tuple
+
+
+# Eksempel på bruk av funksjonen
+bruker_inndata = input("Skriv inn tallene, separert med mellomrom: ")
+tall_liste = [int(tall) for tall in bruker_inndata.split()]
+resultat = min_maks(tall_liste)
+if resultat is not None:
+    print("Minste tall: " + str(resultat[0]) + ", Største tall: " + str(resultat[1]))

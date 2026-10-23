@@ -1,0 +1,13 @@
+# Oppgave 1 - Tuple ukedager
+# Skriver ut ukedagen som tilsvarer tallet bruker skriver inn.
+
+# Tuple med ukedager
+ukedager = ("Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag")
+
+# Spør bruker om tall mellom 1 og 7, og henter ut ukedagen fra tuplen
+# Sjekker om tallet er gyldig eller ikke
+tall = int(input("Velg et tall mellom 1 og 7 for å få ukedagen: "))
+if tall < 1 or tall > 7:
+    print("Ugyldig tall. Vennligst prøv igjen.")
+else:
+    print(ukedager[tall - 1])
