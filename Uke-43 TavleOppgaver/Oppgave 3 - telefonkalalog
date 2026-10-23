@@ -1,0 +1,31 @@
+# Oppgave 3 - telefonkatalog
+# spør bruker om navn til person i katalogen, om personen finnes i katalogen, returner telefonnummeret,
+# ellers spør om brukeren vil legge til personen i katalogen.
+
+telefonkatalog = {}
+
+while True:
+    svar = input("Skriv inn et navn for å søke i telefonkatalogen ('q' for å avslutte, 'w' for å se katalogen): ")
+    # Avslutter løkken hvis brukeren skriver 'q'
+    if svar == 'q':
+        break
+    # Skriver ut hele katalogen hvis brukeren skriver 'w'
+    elif svar == 'w':
+        print("Telefonkatalogen inneholder følgende personer:")
+        for navn, nummer in telefonkatalog.items():
+            print(navn + ": " + nummer)
+
+    # Sjekker om navnet finnes i katalogen
+    if svar in telefonkatalog:
+        print(svar+" finnes i katalogen --- Telefonnummer: " + telefonkatalog[svar])
+    else:
+        nyperson = input(svar + " finnes \033[1mikke\033[0m i katalogen. Vil du legge til personen? (ja/nei): ").strip().lower()
+        if nyperson == 'ja':
+            # Spør bruker om telefonnummer til personen, fjerner eventuelle mellomrom med .replace(" ", "")
+            nyttnummer = input("Skriv inn telefonnummeret til " + svar + ": ").replace(" ", "")
+            telefonkatalog[svar] = nyttnummer  # Legger til personen i katalogen
+            print(svar + " er nå lagt til i katalogen med telefonnummer: " + nyttnummer)
+        else:
+            print("Personen ble ikke lagt til i katalogen.")
+
+print("Avslutter programmet. Takk for at du brukte telefonkatalogen.")
