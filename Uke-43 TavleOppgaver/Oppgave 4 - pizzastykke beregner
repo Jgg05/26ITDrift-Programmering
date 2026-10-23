@@ -1,0 +1,26 @@
+# Oppgave 4 - pizzastykke beregner
+# Spør bruker om hvor mange pizzastykker og personer,
+# beregner hvor mange pizzastykker hver person får og hvor mange som blir til overs.
+
+# spør bruker om antall pizzastykker og personer
+try:
+    pizzastykker = int(input("Hvor mange pizzastykker er det? "))
+    personer = int(input("Hvor mange personer skal dele pizzaen? "))
+
+except ValueError:
+    print("Vennligst skriv inn gyldige tall for pizzastykker og personer.")
+
+# Sjekk om antall personer er større enn 0 og antall pizzastykker er ikke negativt
+if personer <= 0:
+    print("Antall personer må være større enn 0.")
+
+if pizzastykker < 0:
+    print("Antall pizzastykker kan ikke være negativt.")
+# Beregner hvor mange pizzastykker hver person får og hvor mange som blir til overs
+else:
+    Pizzastykker_per_person = pizzastykker // personer
+    Pizzastykker_til_overs = pizzastykker % personer
+
+# Skriver ut resultatet
+print("Hver person får", Pizzastykker_per_person, "pizzastykker.")
+print("Det blir", Pizzastykker_til_overs, "pizzastykker til overs.")
