@@ -1,0 +1,22 @@
+# Oppgave 5 - Delekalkulator
+# Spør bruker om to heltall, skriver ut det første tallet delt på det andre tallet.
+# Bruker funksjonen (les_heltall) to ganger til å få to tall lagret til to variabler.
+
+def les_heltall(tekst):
+    while True:
+        try:
+            return int(input(tekst))
+        except ValueError:
+            print("Vennligst skriv inn et gyldig heltall.")
+
+# Les inn to heltall fra brukeren
+tall1 = les_heltall("Skriv inn det første heltallet: ")
+tall2 = les_heltall("Skriv inn det andre heltallet: ")
+
+# Sjekk om det andre tallet er null
+if tall2 == 0:
+    print("Feil: Det andre tallet kan ikke være null.")
+else:
+    # Beregn og skriv ut resultatet
+    resultat = tall1 / tall2
+    print(str(tall1) + " delt på " + str(tall2) + " er " + str(resultat))
