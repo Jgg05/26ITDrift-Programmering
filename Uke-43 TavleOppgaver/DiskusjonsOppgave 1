@@ -1,0 +1,20 @@
+register = {}
+while True:
+    navn = input("Navn: ")
+    if navn == "":
+        break
+    poeng = int(input("Poeng (0-10): "))
+    if poeng < 0 or poeng > 10:
+        break
+    if navn in register:
+        register[navn] += (poeng,)
+    else:
+        register[navn] = (poeng,)
+
+for navn in sorted(register.keys()):
+    total = 0
+    antall = 0
+    for p in register[navn]:
+        total += p
+        antall += 1
+    print(navn, ":", total / antall)
