@@ -1,0 +1,14 @@
+# Oppgave 1 - Parsons 1
+# Programmet skal finne det største tallet i en liste med tall.
+
+def storste(liste):
+    resultat = liste[0]
+    for x in liste:
+        if x > resultat:
+            resultat = x
+    return resultat
+
+tall = [4, 9, 2, 7]
+print(storste(tall))
+print(storste([-5, -2, -9]))
+

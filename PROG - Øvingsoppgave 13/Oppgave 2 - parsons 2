@@ -1,0 +1,19 @@
+# Oppgave 2 - parsons 2
+# Programmet skal be brukeren om å skrive inn sin alder, og deretter skrive ut alderen.
+
+while True:
+    try:
+        alder = int(input("Alder: "))
+        break
+    except ValueError:
+        print("Skriv et heltall")
+
+print("Du er", alder, "år")
+
+
+
+
+
+
+
+
