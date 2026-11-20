@@ -1,0 +1,69 @@
+# Oppgave 3 - forklar koden
+# Programmet ber bruker om å skrive inn poeng, og deretter beregner det snittet og antall karakterer basert på poengene.
+
+# Definerer funksjonen for å beregne snittet av en liste med tall.
+# Den summerer alle tallene i listen og deler på lengden av listen for å finne snittet.
+def snitt(tall):
+    total = 0
+    for t in tall:
+        total += t
+    return total / len(tall)
+
+# Definerer funksjonen for karakterer.
+def karakter(poeng):
+    if poeng >= 90:
+        return "A"
+    elif poeng >= 80:
+        return "B"
+    elif poeng >= 60:
+        return "C"
+    elif poeng >= 40:
+        return "D"
+    else:
+        return "F"
+
+# Tomme liste og Dictionary for å lagre poeng og antall karakterer.
+poengliste = []
+antall = {}
+
+# Ber bruker om å skrive inn poeng eller 'ferdig' for å avslutte.
+# Programmet sjekker om input er gyldig og legger til poeng i listen.
+while True:
+    svar = input("Poeng (0-100, eller 'ferdig'): ")
+    if svar == "ferdig":
+        break
+    try:
+        poeng = int(svar)
+    except ValueError:
+        print("Ugyldig tall, prøv igjen")
+        continue
+    if poeng < 0 or poeng > 100:
+        print("Poeng må være mellom 0 og 100")
+        continue
+    poengliste.append(poeng)
+    k = karakter(poeng)
+    # oppdaterer antall karakterer i Dictionary, hvis karakteren allerede finnes, øker den med 1, ellers settes den til 1.
+    if k in antall:
+        antall[k] += 1
+    else:
+        antall[k] = 1
+
+# Skriver ut antall registrerte poeng, snittet og antall karakterer.
+print("Antall registrert:", len(poengliste))
+print("Snitt:", snitt(poengliste))
+for k in antall:
+    print(k, ":", antall[k])
+
+
+# Input	    Hva skjer? 	                                        poengliste 	    antall
+# 85 	    85 gir karakter B 	                                [85] 	        {'B': 1}  	 
+# 80 	    80 gir karakter B 	                                [85, 80] 	    {'B': 1, 'C': 1}  	 
+# abc 	    får feilmelding: "Ugyldig tall, prøv igjen" 	  	  	 
+# 120 	    Får feilmelding: "Poeng må være mellom 0 og 100"  	  	 
+# 40 	    40 gir karakter D 	                                [85, 80, 40] 	{'B': 1, 'C': 1, 'D': 1}  	 
+# ferdig    Avslutter input, programmet skriver ut antall
+#           registrerte poeng, snittet og antall karakterer.  	  	 
+
+
+# Om bruker skriver ferdig uten vil det komme en feilmeldingen "ZeroDivisionError: division by zero" fordi listen poengliste er tom,
+# og funksjonen snitt prøver å dele på lengden av listen som er 0.
